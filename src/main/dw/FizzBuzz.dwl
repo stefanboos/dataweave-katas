@@ -1,10 +1,13 @@
 %dw 2.5
-fun fizz(n : Number) = if (mod(n, 3) == 0) "Fizz" else ""
+fun fizzes(n : Number) = mod(n, 3) == 0
 
-fun buzz(n : Number) = if (mod(n, 5) == 0) "Buzz" else ""
+fun buzzes(n : Number) = mod(n, 5) == 0
 
-fun fizzBuzzOnly(n: Number) = fizz(n) ++ buzz(n)
+fun neitherFizzNorBuzz(n: Number) = if (!fizzes(n) and !buzzes(n)) n as String else ""
+
+fun fizz(n : Number) = if (fizzes(n)) "Fizz" else ""
+
+fun buzz(n : Number) = if (buzzes(n)) "Buzz" else ""
 
 fun fizzBuzz(n: Number) = 
-    if (fizzBuzzOnly(n) != "") fizzBuzzOnly(n)
-    else n as String
+    neitherFizzNorBuzz(n) ++ fizz(n) ++ buzz(n)
