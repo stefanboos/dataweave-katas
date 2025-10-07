@@ -1,13 +1,17 @@
 %dw 2.5
-fun fizzes(n : Number) = mod(n, 3) == 0
 
-fun buzzes(n : Number) = mod(n, 5) == 0
-
-fun neitherFizzNorBuzz(n: Number) = if (!fizzes(n) and !buzzes(n)) n as String else ""
-
-fun fizz(n : Number) = if (fizzes(n)) "Fizz" else ""
-
-fun buzz(n : Number) = if (buzzes(n)) "Buzz" else ""
-
-fun fizzBuzz(n: Number) = 
-    neitherFizzNorBuzz(n) ++ fizz(n) ++ buzz(n)
+/**
+ * A pure function to solve the FizzBuzz kata.
+ * It uses pattern matching to evaluate the conditions in a clear and efficient way.
+ *
+ * @param n The number to evaluate.
+ * @return "Fizz" if n is divisible by 3, "Buzz" if divisible by 5, 
+ *         "FizzBuzz" if divisible by both, or the number as a String otherwise.
+ */
+fun fizzBuzz(n: Number) =
+  n match {
+    case num if (mod(num, 15) == 0) -> "FizzBuzz"
+    case num if (mod(num, 3) == 0) -> "Fizz"
+    case num if (mod(num, 5) == 0) -> "Buzz"
+    else -> n as String
+  }
