@@ -12,6 +12,10 @@ mvn test
 
 ## Further Reading
 
+- [DataWeave Playground](https://dataweave.mulesoft.com/learn/dataweave) allows to quickly experiment with DataWeave code (REPL - Read Evaluate Print Loop)
+
+- [DataWeave Overview](https://docs.mulesoft.com/dataweave/latest/) links to the language documentation and other important DataWeave knowledge
+
 - [Anypoint Code Builder Overview](https://docs.mulesoft.com/anypoint-code-builder/) explains how to install the expansion pack
 
 - [Installing and Using the DataWeave Extension](https://docs.mulesoft.com/dataweave/latest/dataweave-extension-plugin) explains how to create DataWeave libraries, modules, etc.

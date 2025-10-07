@@ -4,5 +4,5 @@ import * from FizzBuzz
 output application/json
 ---
 {
-    fizzBuzz : fizzBuzz(1)
+    fizzBuzz : fizzBuzz(21)
 }
